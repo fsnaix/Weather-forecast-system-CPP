@@ -15,7 +15,6 @@ string CenterInt(const int stat, const int w);
 
 void HandleSorting(string input, vector<City_report> &alist);
 void ToGraph(vector<City_report> &alist, string input);
-// void ToPieChart(vector<City_report> &alist, string input);
 void ToHistogram();
 void DataGrouping(double entry);
 void Summary(vector<City_report> &alist, string input);
@@ -61,7 +60,6 @@ void Plot(vector<City_report> alist) {
   }
 
   ToGraph(alist, chart_input);
-  // ToPieChart(alist, chart_input);
   Summary(alist, chart_input);
   ToHistogram();
   stat.clear();
@@ -209,11 +207,6 @@ void ToGraph(vector<City_report> &alist, string input) {
 	}
   
   cout << endl;
-}
-
-string CenterString(const string& str, int width) {
-    int padding = (width - str.length()) / 2;
-    return string(padding, ' ') + str + string(width - padding - str.length(), ' ');
 }
 
 /* Draw histogram */
